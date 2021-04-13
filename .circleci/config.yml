@@ -30,8 +30,4 @@ workflows:
               only: master
           requires:
             - hold-apply
-    steps:
-      - checkout: true
-      - run:
-          name: "echo environment variables"
-          command: echo $GOOGLE_CREDENTIALS
+    
