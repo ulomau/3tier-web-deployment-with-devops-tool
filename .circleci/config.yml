@@ -7,7 +7,7 @@ workflows:
       - terraform/fmt:
           checkout: true
           context: terraform
-       - run:
+      - run:
           name: "echo an env var that is part of our context"
           command: |
             export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS
