@@ -16,7 +16,6 @@ orbs:
             echo $GOOGLE_CREDENTIALS
 workflows:
   deploy_infrastructure:
-    jobs:
       - terraform/fmt:
           checkout: true
           context: terraform
