@@ -8,8 +8,7 @@ orbs:
        steps:
          - checkout
          - setup_remote_docker:
-          docker_layer_caching: false
-        - run:
+         - run:
           name: "echo an env var that is part of our context"
           command: |
             echo 'export GOOGLE_APPLICATION_CREDENTIALS=$(GOOGLE_CREDENTIALS)'
