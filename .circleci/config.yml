@@ -10,7 +10,7 @@ workflows:
           - run:
           name: "echo an env var that is part of our context"
           command: |
-            export GOOGLE_APPLICATION_CREDENTIALS=~/$GOOGLE_CREDENTIALS
+            export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS
             echo $GOOGLE_CREDENTIALS
       - terraform/validate:
           checkout: true
