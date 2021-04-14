@@ -9,10 +9,10 @@ orbs:
          - checkout
          - setup_remote_docker:
          - run:
-          name: "echo an env var that is part of our context"
-          command: |
-            echo 'export GOOGLE_APPLICATION_CREDENTIALS=$(GOOGLE_CREDENTIALS)'
-            echo $GOOGLE_CREDENTIALS
+             name: echo an env var that is part of our context
+             command: |
+               echo 'export GOOGLE_APPLICATION_CREDENTIALS=$(GOOGLE_CREDENTIALS)'
+               echo $GOOGLE_CREDENTIALS
     deploy_infrastructure: 
          docker:
            - image: circleci/python:3.7.4
