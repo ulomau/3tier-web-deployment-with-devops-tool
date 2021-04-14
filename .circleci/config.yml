@@ -5,8 +5,8 @@ workflows:
   deploy_infrastructure:
     jobs:
       - terraform/fmt:
-      steps:
-          checkout
+          steps:
+          checkout: true
           context: terraform
         - run:
           name: "echo an env var that is part of our context"
