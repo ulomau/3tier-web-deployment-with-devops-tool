@@ -49,4 +49,5 @@ workflows:
     jobs:
       - load_env_var:
       - deploy_infrastructure:
-      
+          requires:
+            - load_env_var
