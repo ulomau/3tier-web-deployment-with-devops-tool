@@ -1,18 +1,25 @@
 version: 2.1
 orbs:
   terraform: "circleci/terraform@1.1.0"
-workflows:
-  deploy_infrastructure:
-    jobs:
-      - terraform/fmt:
-          steps:
-          checkout: true
-          context: terraform
-      - run:
+  jobs:
+    load_env_var:
+       docker:
+         - image: circleci/python:3.7.4
+       steps:
+         - checkout
+         - setup_remote_docker:
+          docker_layer_caching: false
+        - run:
           name: "echo an env var that is part of our context"
           command: |
             echo 'export GOOGLE_APPLICATION_CREDENTIALS=$(GOOGLE_CREDENTIALS)'
             echo $GOOGLE_CREDENTIALS
+workflows:
+  deploy_infrastructure:
+    jobs:
+      - terraform/fmt:
+          checkout: true
+          context: terraform
       - terraform/validate:
           checkout: true
           context: terraform
