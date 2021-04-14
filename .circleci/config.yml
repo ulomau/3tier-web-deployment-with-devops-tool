@@ -19,15 +19,15 @@ orbs:
            - image: circleci/python:3.7.4
          steps:
          - terraform/fmt:
-          checkout: true
+          checkout: 
           context: terraform
       - terraform/validate:
-          checkout: true
+          checkout: 
           context: terraform
           requires:
             - terraform/fmt
       - terraform/plan:
-          checkout: true
+          checkout: 
           context: terraform
           persist-workspace: true
           requires:
