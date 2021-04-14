@@ -5,6 +5,7 @@ workflows:
   deploy_infrastructure:
     jobs:
       - terraform/fmt:
+      steps:
           checkout: true
           context: terraform
       - run:
