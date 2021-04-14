@@ -13,9 +13,11 @@ orbs:
           command: |
             echo 'export GOOGLE_APPLICATION_CREDENTIALS=$(GOOGLE_CREDENTIALS)'
             echo $GOOGLE_CREDENTIALS
-workflows:
-  deploy_infrastructure:
-      - terraform/fmt:
+    deploy_infrastructure: 
+         docker:
+           - image: circleci/python:3.7.4
+         steps:
+         - terraform/fmt:
           checkout: true
           context: terraform
       - terraform/validate:
@@ -41,4 +43,9 @@ workflows:
               only: master
           requires:
             - hold-apply
-    
+workflows:
+  deploy_infrastructure1:
+    jobs:
+      - load_env_var:
+      - deploy_infrastructure:
+      
