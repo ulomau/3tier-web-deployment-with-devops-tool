@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   terraform: "circleci/terraform@1.1.0" 
 jobs:
-      - environmental/variables:
+      - env-var:
           checkout: true
           context: terraform
           run:
@@ -39,4 +39,4 @@ jobs:
 workflows:
     deploy_infrastructure:
       jobs:  
-        - environmental/variables:
+        - env-var:
