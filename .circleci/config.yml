@@ -38,8 +38,8 @@ jobs:
             branches:
               only: master
           requires:
-     - hold-apply
-          type: approval
+            - hold-apply
+                 type: approval
 workflows:
   deploy_infrastructure:
 
