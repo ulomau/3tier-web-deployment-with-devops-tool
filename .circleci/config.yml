@@ -1,9 +1,19 @@
 version: 2.1
 orbs:
-  terraform: "circleci/terraform@1.1.0"
-workflows:
-  deploy_infrastructure:
-    jobs:
+  terraform: "circleci/terraform@1.1.0" 
+jobs:
+      - load_env_var:
+          checkout: true
+          context: terraform
+          run:
+             name: "echo an env var that is part of our context"
+             command: |
+               echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
+               echo $GOOGLE_CREDENTIALS
+jobs:
+      - load/env_var:
+          checkout: true
+          context: terraform
       - terraform/fmt:
           checkout: true
           context: terraform
@@ -30,4 +40,7 @@ workflows:
               only: master
           requires:
       - hold-apply:
-           type: approval
+ workflows:
+    deploy_infrastructure:
+      jobs:  
+        - load_env_var:
