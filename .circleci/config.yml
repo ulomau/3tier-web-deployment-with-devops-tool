@@ -15,6 +15,9 @@ jobs:
       - terraform/fmt:
           checkout: true
           context: terraform
+      - load_env_var:
+          checkout: true
+          context: terraform
       - terraform/validate:
           checkout: true
           context: terraform
@@ -43,5 +46,4 @@ workflows:
   load_env_var:
     jobs:
       - load_env_var:
-          checkout: true
-          context: terraform
+          
