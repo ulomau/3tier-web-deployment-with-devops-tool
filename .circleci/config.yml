@@ -38,6 +38,7 @@ workflows:
               only: master
           requires:
       - hold-apply:
+           type: approval
 
       
            
