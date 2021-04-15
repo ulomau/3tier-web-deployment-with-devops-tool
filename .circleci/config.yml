@@ -7,10 +7,10 @@ workflows:
       - terraform/fmt:
           checkout: true
           context: terraform
-      - tf-key.json/$"GOOGLE_CREDENTIALS":
+      - environmental variables":
           checkout: true
           context: terraform
-          echo "export GOOGLE_APPLICATION_CREDENTIALS="GOOGLE_CREDENTIALS" \
+          echo "export GOOGLE_APPLICATION_CREDENTIALS="GOOGLE_CREDENTIALS" 
           echo "GOOGLE_CREDENTIALS"
       - terraform/validate:
           checkout: true
