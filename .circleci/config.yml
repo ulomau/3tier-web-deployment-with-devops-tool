@@ -11,8 +11,7 @@ jobs:
           setup_remote_docker:
           run:
              name: "echo an env var that is part of our context"
-             command: |
-             export TF_VAR_GOOGLE_APP_CREDENTIALS=$(GOOGLE_CREDENTIALS) 
+             command: export TF_VAR_GOOGLE_APP_CREDENTIALS=$(GOOGLE_CREDENTIALS) 
 workflows:
   deploy_infrastructure:
     jobs:
