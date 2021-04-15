@@ -42,5 +42,4 @@ workflows:
         - env-var:
            checkout: true
           context: terraform
-          requires: $GOOGLE_CREDENTIALS
- 
+          
