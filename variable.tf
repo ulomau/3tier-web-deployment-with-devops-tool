@@ -19,5 +19,5 @@ variable "machine_type" {
 }
 
 variable "GOOGLE_APP_CREDENTIALS" {
-  type =string
+  type = string
 }
