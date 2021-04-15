@@ -1,3 +1,4 @@
+
 variable "name" {
   default = "tf-cluster"
 }
@@ -18,6 +19,3 @@ variable "machine_type" {
   default = "n1-standard-1"
 }
 
-variable "GOOGLE_APP_CREDENTIALS" {
-  type = string
-}
