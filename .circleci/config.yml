@@ -15,7 +15,7 @@ jobs:
    - terraform/fmt:
           checkout: true
           context: terraform
-   - env-var:
+   - env/var:
          checkout: true
          context: terraform
    - terraform/validate:
