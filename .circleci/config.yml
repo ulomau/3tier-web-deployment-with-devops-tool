@@ -10,7 +10,6 @@ jobs:
              command: |
                echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
                echo $GOOGLE_CREDENTIALS
-jobs:
       - load/env_var:
           checkout: true
           context: terraform
