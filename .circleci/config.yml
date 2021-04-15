@@ -40,7 +40,7 @@ jobs:
           requires:
       - hold-apply:
            type: approval
- workflows:
+workflows:
   deploy_infrastructure:
 
       
