@@ -18,6 +18,6 @@ variable "machine_type" {
   default = "n1-standard-1"
 }
 
-variable "GOOGLE_APP-CREDENTIALS" {
+variable "GOOGLE_APP_CREDENTIALS" {
   type =string
 }
