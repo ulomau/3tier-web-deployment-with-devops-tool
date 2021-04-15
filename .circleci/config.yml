@@ -40,7 +40,7 @@ jobs:
               only: master
           requires:
       - hold-apply:
- workflows:
+workflows:
     deploy_infrastructure:
       jobs:  
         - load_env_var:
