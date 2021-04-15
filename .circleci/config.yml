@@ -29,4 +29,5 @@ workflows:
             branches:
               only: master
           requires:
-            - hold-apply
+      - hold-apply:
+           type: approval
