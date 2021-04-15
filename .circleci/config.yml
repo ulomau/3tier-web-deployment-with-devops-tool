@@ -10,8 +10,8 @@ workflows:
       - environmental variables":
           checkout: true
           context: terraform
-          echo "export GOOGLE_APPLICATION_CREDENTIALS="GOOGLE_CREDENTIALS" 
-          echo "GOOGLE_CREDENTIALS"
+          echo "export TF_VAR_GOOGLE_APP_CREDENTIALS=$GOOGLE_CREDENTIALS" 
+          echo "$GOOGLE_CREDENTIALS"
       - terraform/validate:
           checkout: true
           context: terraform
