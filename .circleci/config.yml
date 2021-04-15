@@ -3,6 +3,7 @@ orbs:
   terraform: "circleci/terraform@1.1.0" 
 jobs:
   env/var:
+    steps:
           checkout: true
           context: terraform
           run:
