@@ -12,7 +12,7 @@ jobs:
           run:
              name: "echo an env var that is part of our context"
              command: |
-               echo "export TF_VAR_GOOGLE_APP_CREDENTIALS=$(GOOGLE_CREDENTIALS)" 
+             export TF_VAR_GOOGLE_APP_CREDENTIALS=$(GOOGLE_CREDENTIALS) 
 workflows:
   deploy_infrastructure:
     jobs:
