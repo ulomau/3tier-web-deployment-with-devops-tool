@@ -43,3 +43,5 @@ workflows:
   load_env_var:
     jobs:
       - load_env_var:
+          checkout: true
+          context: terraform
