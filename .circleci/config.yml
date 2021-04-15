@@ -39,7 +39,7 @@ jobs:
               only: master
           requires:
      - hold-apply
-                  type: approval
+          type: approval
 workflows:
   deploy_infrastructure:
 
