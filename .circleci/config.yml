@@ -18,8 +18,7 @@ workflows:
       - env-var:
          checkout: true
          context: terraform
-         requires: echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'\
-                   echo $GOOGLE_CREDENTIALS
+         requires: echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
       - terraform/validate:
           checkout: true
           context: terraform
