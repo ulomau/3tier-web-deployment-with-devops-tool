@@ -36,8 +36,7 @@ jobs:
           context: terraform
           filters:
             branches:
-              only: master
-          requires:
+              only: main
       - hold-apply:
            type: approval
 workflows:
