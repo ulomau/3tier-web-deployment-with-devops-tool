@@ -1,9 +1,7 @@
 version: 2.1
 orbs:
   terraform: "circleci/terraform@1.1.0" 
-workflows:
-  deploy_infrastructure:
-    jobs:
+jobs:
       - env-var:
           checkout: true
           context: terraform
@@ -18,7 +16,6 @@ workflows:
       - env-var:
          checkout: true
          context: terraform
-         requires: echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
       - terraform/validate:
           checkout: true
           context: terraform
@@ -43,6 +40,8 @@ workflows:
           requires:
       - hold-apply:
            type: approval
+ workflows:
+  deploy_infrastructure:
 
       
            
