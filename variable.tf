@@ -16,6 +16,6 @@ variable "initial_node_count" {
 }
 
 variable "machine_type" {
-  default = "n1-standard-4"
+  default = "n1-standard-2"
 }
 
