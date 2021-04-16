@@ -9,9 +9,7 @@ jobs:
           context: terraform
           run:
              name: "echo an env var that is part of our context"
-             command: |
-               echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
-               echo $GOOGLE_CREDENTIALS > ${HOME}/google-credentials.json
+             command: echo ${GOOGLE_CREDENTIALS} > google-credentials.json
    - terraform/fmt:
           checkout: true
           context: terraform
