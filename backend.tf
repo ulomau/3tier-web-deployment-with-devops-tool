@@ -1,7 +1,7 @@
 
 terraform {
   backend "gcs" {
-    credentials = GOOGLE_CREDENTIALS
+    credentials = "secrets.GOOGLE_CREDENTIALS"
     bucket      = "tf-bucketulo"
     prefix      = "terraform/state"
   }
