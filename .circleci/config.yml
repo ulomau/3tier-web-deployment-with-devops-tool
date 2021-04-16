@@ -1,18 +1,25 @@
 version: 2.1
 orbs:
-  terraform: "circleci/terraform@1.1.0" 
+  terraform: circleci/terraform@2.0.1 
 jobs:
-   - "env/var":
+   - env/var:
        executor: terraform/default
        steps:
           checkout: true
           context: terraform
           run:
              name: "echo an env var that is part of our context"
-             command: echo ${GOOGLE_CREDENTIALS} > google-credentials.json
+             command: | 
+               echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
+               echo ${GOOGLE_CREDENTIALS} > google-credentials.json
    - terraform/fmt:
           checkout: true
           context: terraform
+   - env/var:
+          checkout: true
+          context: terraform
+          requires:
+            - env-var
    - terraform/validate:
           checkout: true
           context: terraform
@@ -40,7 +47,3 @@ jobs:
 workflows:
   deploy_infrastructure:
 
-      
-           
-          
-          
