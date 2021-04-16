@@ -1,17 +1,17 @@
 version: 2.1
 orbs:
   terraform: circleci/terraform@2.0.1 
+  gcp-gcr: circleci/gcp-gcr@0.6.1
 jobs:
-   - env/var:
-       executor: terraform/default
-       steps:
-          checkout: true
-          context: terraform
+  env/var:
+     docker:
+      - image: hashicorp/terraform:0.12.17
+     steps:
+          checkout: 
           run:
              name: "echo an env var that is part of our context"
-             command: | 
-               echo 'export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_CREDENTIALS'
-               echo ${GOOGLE_CREDENTIALS} > google-credentials.json
+             context: terraform
+             command: echo ${GOOGLE_CREDENTIALS} > google-credentials.json
    - terraform/fmt:
           checkout: true
           context: terraform
