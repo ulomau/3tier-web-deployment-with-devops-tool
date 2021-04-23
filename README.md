@@ -11,7 +11,7 @@
  * Bash script for automation 
 
 ## Versions
-## The Terraform version used is Terraform 0.12. If you haven't upgraded and need a Terraform 0.11.x-compatible version of this module, the last released version intended for Terraform 0.11.x is 3.0.0.
+## The Terraform version used is Terraform 0.12. 
 ## kubectl 1.9.x
 ## Terraform Provider for GCP v3.41
 
