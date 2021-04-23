@@ -127,12 +127,12 @@ fi
     completed
 ```
 
-## Warning!
-### Ensure to encode your GCP service secret key with base64 or 
+## Warning! 
+### Ensure note to expose your GCP service secret by commiting it to your repo. Encode the value of key with base64  
 
 ### or
 
-### Before the key can be added to github environmental variable, it needs to be altered a bit in order to be stored in the variable. Because we need to remove all the newline characters from the .json key value. To do that, use the command below:
+### Before the key can be added to Github environmental variable, it needs to be altered a bit in order to be stored in the variable.You can do this by removing all the newline characters from the .json key value. To do that, use the command below:
 ### First open the file with vim editor vi j.son-key
 
 ```
