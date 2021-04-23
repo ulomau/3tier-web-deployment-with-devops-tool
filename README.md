@@ -1,17 +1,21 @@
-# Create and deploy a web application called Bucketlist on GKE using Terraform, Github Actions and Bash script
-## This Project handles the creation and deployment of a web app  on Google Kubernets clusters by applying DevOps tools. It creates a Google kubernetes engine clusters with Terraform as the Infrastructure as code (IAC), GitHub Actions workflow pipeline as the CICD and Basch script to automate the deploymnet of a web app (Bucketlist) on the GKE clusters 
- ## The basic requirements for this project are:
+## Create and deploy a web application called Bucketlist on GKE using Terraform, Github Actions and Bash script
+## This Project handles the creation and deployment of a web app  on Google Kubernetes clusters by applying DevOps tools. It creates a Google kubernetes engine clusters with Terraform as the Infrastructure as code (IAC), GitHub Actions workflow pipeline as the CICD and Basch script to automate the deploymnet of a web app (Bucketlist) on the GKE clusters 
+ ## Basic project requirements:
+ ### Before this project can be implemented, you must ensure that the following pre-requisites are fulfilled
  * GitHub account
  * GCP account with billing enabled
+ * GCP project and service account enabled with the right permissions
  * Google SDK CLI installed in your local terminal
- * Terraform for IAC
+ * Terraform for IAC installed in your local terminal
  * GitHub Actions
  * Bash script for automation 
 
-# Compability
+## Versions
 ## The Terraform version used is Terraform 0.12. If you haven't upgraded and need a Terraform 0.11.x-compatible version of this module, the last released version intended for Terraform 0.11.x is 3.0.0.
+## kubectl 1.9.x
+## Terraform Provider for GCP v3.41
 
-# Procedure:
+## Procedure:
 
 1. Create a GCP project, enable billing and API permissions.
 2. Create gcp service account on the created project and create a service secret.json key and also GCP storage bucket for terraform state.
@@ -23,6 +27,26 @@
 8. Add the Google secret.json encoded key to Github environmetal variable and secret
 9. Create a workflow pipeline on GitHub Actions to trigger GKE build
 10. Write a bash script on GCP cloud shell to automate Bucketlist wep app deployment.
+
+
+## To configure a GCP service account for this project, it must be enabled with the following roles:
+
+* roles/compute.viewer
+* roles/compute.securityAdmin (only required if add_cluster_firewall_rules is set to true)
+* roles/container.clusterAdmin
+* roles/container.developer
+* roles/iam.serviceAccountUser
+* roles/resourcemanager.projectIamAdmin
+* role roles/container.admin
+* role roles/compute.admin
+
+## In order to be able to use the Service Account you must activate the following APIs on the project where the Service Account was created:
+
+*  gcloud services enable servicenetworking.googleapis.com &&
+* gcloud services enable cloudresourcemanager.googleapis.com &&
+* gcloud services enable container.googleapis.com &&
+* gcloud services enable compute.googleapis.com
+
 
  Terraform commands
 ```
