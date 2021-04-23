@@ -129,7 +129,7 @@ fi
 ```
 
 ## Warning! 
-### Ensure note to expose your GCP service secret by commiting it to your repo. Encode the value of key with base64  
+### Ensure not to expose your GCP service secret by commiting it to your repo. Encode the value of key with base64  
 
 ### or
 
@@ -149,4 +149,4 @@ type wq!
 
 ```
 
-
+### Add the value into Github environmental variable and secret.
