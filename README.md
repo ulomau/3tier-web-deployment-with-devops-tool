@@ -55,6 +55,8 @@ terraform plan
 terraform apply
 ```
 ### To delete the GKE cluster: "terraform destroy"
+## About the web application "Bucketlist"
+### Bucketlist is simply a web app were you sign up and record your bucketlist and mark it off when done. It is like a todo list but in this case for bucketlist activities.
 
 # Bash script code for the web app deployment on GKE
 
@@ -128,6 +130,8 @@ fi
     completed
 ```
 
+### Helm and Tiller, Kubernetes package manager was used to install Nginx ingress (Note my ingress could not deploy because GCP threw an error that i have exceeded quota for free tier)
+
 ## Warning! 
 ### Ensure not to expose your GCP service secret by commiting it to your repo. Encode the value of key with base64  
 
@@ -150,3 +154,4 @@ type wq!
 ```
 
 ### Add the value into Github environmental variable and secret.
+
