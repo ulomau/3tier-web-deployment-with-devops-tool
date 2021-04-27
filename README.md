@@ -54,7 +54,11 @@ terraform init
 terraform plan
 terraform apply
 ```
+### On GCP console, go to Kubernetes engine and you will find the cluster created.
+###  [Kubernetes cluster](https://drive.google.com/file/d/1OMFKmrqWbBeSymC8aCM2-C8P7ffxkXtD/view?usp=sharing)     
+  
 ### To delete the GKE cluster: "terraform destroy"
+
 ## About the web application "Bucketlist"
 ### Bucketlist is simply a web app were you sign up and record your bucketlist and mark it off when done. It is like a todo list but in this case for bucketlist activities.
 ## Github url containing web app    [GitHub](http://https://github.com/ulomau/bucketlist-api)  
@@ -129,8 +133,10 @@ fi
     secrets.yaml
     completed
 ```
-
+### Deployments of frontend, backend and API [workloads](https://drive.google.com/file/d/1u9gGPQUrw0_aAvu-Nf-rmCkFD8fUs-rj/view?usp=sharing)
+###  [Services](https://drive.google.com/file/d/1XjsePGFHUf4IGFMqRddrOlIRZ_sKCwXg/view?usp=sharing)
 ### Helm and Tiller, Kubernetes package manager was used to install Nginx ingress (Note my ingress could not deploy because GCP threw an error that i have exceeded quota for free tier)
+### [Ingress error](https://drive.google.com/file/d/14Y1845uQRBwAF3E7SyW1PMkOruuX4DZH/view?usp=sharing)
 
 ## Warning! 
 ### Ensure not to expose your GCP service secret by commiting it to your repo. Encode the value of key with base64  
