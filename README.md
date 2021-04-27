@@ -133,8 +133,7 @@ fi
     secrets.yaml
     completed
 ```
-### Deployments of frontend, backend and API [workloads](https://drive.google.com/file/d/1u9gGPQUrw0_aAvu-Nf-rmCkFD8fUs-rj/view?usp=sharing)
-###  [Services](https://drive.google.com/file/d/1XjsePGFHUf4IGFMqRddrOlIRZ_sKCwXg/view?usp=sharing)
+### Deployments of frontend, backend and API [workloads](https://drive.google.com/file/d/1u9gGPQUrw0_aAvu-Nf-rmCkFD8fUs-rj/view?usp=sharing)  [Services](https://drive.google.com/file/d/1XjsePGFHUf4IGFMqRddrOlIRZ_sKCwXg/view?usp=sharing)
 ### Helm and Tiller, Kubernetes package manager was used to install Nginx ingress (Note my ingress could not deploy because GCP threw an error that i have exceeded quota for free tier)
 ### [Ingress error](https://drive.google.com/file/d/14Y1845uQRBwAF3E7SyW1PMkOruuX4DZH/view?usp=sharing)
 
